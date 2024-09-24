@@ -2,6 +2,9 @@
 using System.Text;
 using MathNet.Numerics;
 using static System.Console;
+// не ржать над кодом
+// не ругаться матом на код
+// наказание: смертная казнь
 InputEncoding = OutputEncoding = Encoding.Unicode;
 WriteLine(); { { { { { { { { { { { WriteLine("hello wordle"); } } } } } } } } } } }
 while (true) {
@@ -12,7 +15,6 @@ while (true) {
 		NumberPrompt().ToString();
 	} else if (arguments.Length > 1 && arguments[0] == "sqrt") {
 		if (uint.TryParse(arguments[1], out uint digits)) {
-			WriteLine("Ok");
 			//MathNet.Numerics.BigRa
 			SquareRoot(NumberPrompt().Number, digits, arguments.Contains("-print"));
 		}
@@ -23,6 +25,7 @@ void SquareRoot(decimal x, uint digits, bool print = false) {
 		WriteLine("ВНИМАНИЕ ⚠️⚠️🍄🍄🍄🍄🍄⚠️⚠️⚠️ ВОСCТАНИЕ ГРИБОВ 🍄🍄⚠️⚠️⚠️⚠️⚠️⚠️🍄🍄 ⚠️⚠️⚠️⚠️ ВСЕМ ПРИГОТОВИТЬСЯ 🏃‍🏃‍⚠️⚠️⚠️⚠️🍄🍄⚠️⚠️⚠️⚠️⚠️🍄🍄🍄 К ОТПЛЫТИЮ 🚣‍🚣‍⚠️⚠️⚠️⚠️🚣‍🚣‍🍄🍄🍄🍄🍄🚣‍🚣‍");
 		return;
 	}
+	// TODO: Find a BigFloat library with a proper ToString method
 	/*BigRational lower = x > 0 ? 0 : x;
 	WriteLine($"Lower: {lower}");
 	BigRational upper = x > 0 ? x : 0;
@@ -61,6 +64,7 @@ void SquareRoot(decimal x, uint digits, bool print = false) {
 	WriteLine(print ? $"Final number: {lower}" : ""); 
 	*/
 }
+// Input for a number (SUPPORTS REPEATING DECIMALS!!!)
 NumberInfo NumberPrompt() {
 	Write("<∙ ");
 	int x = CursorLeft;
