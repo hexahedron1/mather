@@ -25,7 +25,7 @@ void SquareRoot(decimal x, uint digits, bool print = false) {
 		WriteLine("ВНИМАНИЕ ⚠️⚠️🍄🍄🍄🍄🍄⚠️⚠️⚠️ ВОСCТАНИЕ ГРИБОВ 🍄🍄⚠️⚠️⚠️⚠️⚠️⚠️🍄🍄 ⚠️⚠️⚠️⚠️ ВСЕМ ПРИГОТОВИТЬСЯ 🏃‍🏃‍⚠️⚠️⚠️⚠️🍄🍄⚠️⚠️⚠️⚠️⚠️🍄🍄🍄 К ОТПЛЫТИЮ 🚣‍🚣‍⚠️⚠️⚠️⚠️🚣‍🚣‍🍄🍄🍄🍄🍄🚣‍🚣‍");
 		return;
 	}
-	// TODO: Find a BigFloat library with a proper ToString method
+	// TODO: Найти библу с BigFloat у которой есть рабочий метод ToString
 	/*BigRational lower = x > 0 ? 0 : x;
 	WriteLine($"Lower: {lower}");
 	BigRational upper = x > 0 ? x : 0;
@@ -64,7 +64,7 @@ void SquareRoot(decimal x, uint digits, bool print = false) {
 	WriteLine(print ? $"Final number: {lower}" : ""); 
 	*/
 }
-// Input for a number (SUPPORTS REPEATING DECIMALS!!!)
+// ввод числа (ПОДДЕРЖИВАЕТ ПЕРИОДИЧЕСКИЕ ДРОБИ!!!)
 NumberInfo NumberPrompt() {
 	Write("<∙ ");
 	int x = CursorLeft;
@@ -102,6 +102,7 @@ NumberInfo NumberPrompt() {
 	WriteLine();
 	return new NumberInfo(output);
 }
+// рисует десятичную дробь в консоли
 void Frac(string num, string den) {
 	int x = CursorLeft;
 	int y = CursorTop;
@@ -112,6 +113,7 @@ void Frac(string num, string den) {
 	SetCursorPosition(x + ((width - den.Length) / 2), y + 1);
 	Write(den);
 }
+// срака
 class NumberInfo {
 	public NumberInfo(string str) {
 		decimal output = 0;
